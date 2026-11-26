@@ -1,0 +1,69 @@
+/* Global Arabic and Quranic Typography Enhancements */
+@font-face {
+  font-family: 'Amiri Quran';
+  font-display: swap;
+}
+
+.font-arabic,
+.font-quran {
+  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', 'Traditional Arabic', serif !important;
+  font-feature-settings: "cv01" on, "cv02" on, "cv03" on, "ss01" on;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure smooth Arabic letter connection and diacritic positioning */
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Quranic verse end symbol glyph styling */
+.ayah-number-badge {
+  font-family: 'Amiri Quran', 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif !important;
+  font-feature-settings: "cv01" on, "ss01" on;
+}
+
+/* High-resolution Print & PDF styling */
+@media print {
+  /* Hide interactive chrome and layout sidebars */
+  nav,
+  aside,
+  footer,
+  #back-to-top-btn,
+  .no-print,
+  button,
+  input,
+  select {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+.print-only {
+  display: none;
+}

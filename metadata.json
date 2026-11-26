@@ -1,0 +1,11 @@
+{
+  "name": "An-Noor Quran Companion",
+  "description": "A comprehensive companion for blessed recitations, Duas, daily Azkar, and interactive Tajweed learning.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
